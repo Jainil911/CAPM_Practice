@@ -4,13 +4,13 @@ const {Store} = cds.entities
 module.exports = srv => {
     const db = cds.db
 
-    // srv.on('READ','ProductSet', async(req, res)=>{
-    //     results = []
-    //     results = await db.run([
-    //         SELECT.from(Store) //.where({ProductID: req.data.ProductID})
-    //     ])
-    //     return results
-    // })
+    srv.on('READ','ProductSet', async(req, res)=>{
+        results = []
+        results = await db.run([
+            SELECT.from(Store) //.where({ProductID: req.data.ProductID})
+        ])
+        return results
+    })
     srv.before('CREATE','ProductSet', req =>{
         if(req.data.Price<=0) req.error(400,'Price cannot be negative')
     })
