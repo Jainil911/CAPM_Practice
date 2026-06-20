@@ -1,0 +1,35 @@
+GET http://localhost:4004/odata/v4/store-srv
+
+###
+
+GET http://localhost:4004/odata/v4/store-srv/ProductSet
+
+###
+
+GET http://localhost:4004/odata/v4/store-srv/ProductSet(550e8400-e29b-41d4-a716-446655440004)
+
+###
+
+POST http://localhost:4004/odata/v4/store-srv/ProductSet
+Content-Type: application/json
+
+{
+
+    "ProductName": "Phone",
+    "Description": "Samsung S26 Ultra",
+    "CreatedAt"  : "2026-06-19T00:00:00Z",
+    "Price"      :  149999
+}
+
+###
+
+PUT http://localhost:4004/odata/v4/store-srv/ProductSet(313baa3b-f8d4-4c2c-8bdb-ed13bb97a8d8)
+Content-Type: application/json
+
+{
+
+    "ProductName": "Charger",
+    "Description": "Samsung S26 Ultra",
+    "CreatedAt"  : "2026-06-19T00:00:00Z",
+    "Price"      :  1499
+}
