@@ -28,7 +28,7 @@ Content-Type: application/json
 
 {
 
-    "ProductName": "Charger",
+    "ProductName": "Phon",
     "Description": "Samsung S26 Ultra",
     "CreatedAt"  : "2026-06-19T00:00:00Z",
     "Price"      :  1499

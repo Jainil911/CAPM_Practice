@@ -31,7 +31,9 @@ module.exports = srv => {
         })
         return results;
     })
-    srv.after()
+    srv.after('UPDATE','ProductSet', (data)=>{
+        console.log('Product Updated:',data.ProductID)
+    } )
     srv.on('UPDATE','ProductSet', async(req, res)=>{
         results = []
         results = await db.run([
